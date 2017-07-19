@@ -21,7 +21,6 @@ repositories {
     jcenter()
 }
 
-
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
 
@@ -31,11 +30,5 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = gradleVersion
-}
-
-test {
-    testLogging {
-        events 'passed', 'skipped', 'failed'
-    }
+    gradleVersion = '4.0'
 }

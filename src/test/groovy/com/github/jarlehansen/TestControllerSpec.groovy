@@ -24,3 +24,4 @@ class TestControllerSpec extends Specification {
         response.andExpect(status().isOk())
     }
 }
+
