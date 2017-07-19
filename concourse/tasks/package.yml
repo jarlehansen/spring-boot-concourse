@@ -9,7 +9,7 @@ inputs:
 
 run:
   path: "source-code/gradlew"
-  args: ["clean", "package"]
+  args: ["build"]
 
 params:
   MAVEN_BASEDIR: source-code
