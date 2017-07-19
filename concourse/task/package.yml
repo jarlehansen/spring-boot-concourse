@@ -1,0 +1,15 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: openjdk-8-alpine}
+
+inputs:
+  - name: source-code
+
+run:
+  path: "source-code/gradlew"
+  args: ["clean", "package"]
+
+params:
+  MAVEN_BASEDIR: source-code

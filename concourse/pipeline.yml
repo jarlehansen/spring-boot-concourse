@@ -1,0 +1,15 @@
+resources:
+  - name: source-code
+    type: git
+    source:
+      uri: https://github.com/jarlehansen/spring-boot-concourse.git
+      branch: master
+
+jobs:
+  - name: package
+    plan:
+    - get: source-code
+      trigger: true
+    - task: package
+      privileged: true
+      file: source-code/concourse/tasks/package.yml
