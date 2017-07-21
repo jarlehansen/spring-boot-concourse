@@ -21,7 +21,7 @@ class TestControllerSpec extends Specification {
         def response = mockMvc.perform(get('/test'))
 
         then:
-        response.andExpect(status().isOk())
+        response.andExpect(status().isNoContent())
     }
 }
 
