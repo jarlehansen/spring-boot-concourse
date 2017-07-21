@@ -21,4 +21,3 @@ jobs:
       trigger: true
     - task: Deploy artifact
       file: source-code/concourse/tasks/deploy.yml
-
