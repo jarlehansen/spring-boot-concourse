@@ -10,10 +10,15 @@ jobs:
     plan:
     - get: source-code
       trigger: true
-    - task: build
+    - task: Build project
       privileged: true
       file: source-code/concourse/tasks/build.yml
-    - task: test
-      run:
-        path: echo
-        args: [hello world]
+
+  - name: deploy
+    plan:
+    - get: source-code
+      passed: [build]
+      trigger: true
+    - task: Deploy artifact
+      file: source-code/concourse/tasks/deploy.yml
+
