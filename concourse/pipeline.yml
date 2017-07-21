@@ -7,18 +7,13 @@ resources:
       branch: master
 
 jobs:
-  - name: build
-    plan:
-    - get: source-code
-      trigger: true
-    - task: Build project
-      privileged: true
-      file: source-code/concourse/tasks/build.yml
-
-  - name: deploy
-    plan:
-    - get: source-code
-      passed: [build]
-      trigger: true
-    - task: Deploy artifact
-      file: source-code/concourse/tasks/deploy.yml
+- name: build
+  public: true
+  plan:
+  - get: source-code
+    trigger: true
+  - task: Build project
+    privileged: true
+    file: source-code/concourse/tasks/build.yml
+  - task: Deploy artifact
+    file: source-code/concourse/tasks/deploy.yml
