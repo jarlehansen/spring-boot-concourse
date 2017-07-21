@@ -8,8 +8,7 @@ inputs:
   - name: source-code
 
 outputs:
-  - name: build
-    path: "source-code/build/libs"
+  - name: build-output
 
 run:
   path: "source-code/build.sh"
