@@ -7,6 +7,10 @@ image_resource:
 inputs:
   - name: source-code
 
+outputs:
+  - name: build
+    path: "source-code/build/libs"
+
 run:
   path: "source-code/gradlew"
   args: ["--build-file", "source-code/build.gradle", "build"]

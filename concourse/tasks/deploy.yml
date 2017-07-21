@@ -5,6 +5,9 @@ image_resource:
   type: docker-image
   source: {repository: busybox}
 
+inputs:
+  - name: build
+
 run:
-  path: echo
-  args: [hello world]
+  path: ls
+  args: [build/*]
