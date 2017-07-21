@@ -1,6 +1,3 @@
 #!/bin/sh
-pushd source-code
-    ./gradlew --build-file source-code/build.gradle build
-popd
-
+./gradlew --build-file source-code/build.gradle build
 cp build/libs/*.jar build-output/
