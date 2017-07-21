@@ -9,4 +9,4 @@ inputs:
 
 run:
   path: "source-code/gradlew"
-  args: ["build", "-i"]
+  args: ["--build-file", "source-code/build.gradle", "build"]
