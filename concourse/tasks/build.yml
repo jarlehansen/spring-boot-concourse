@@ -12,5 +12,4 @@ outputs:
     path: "source-code/build/libs"
 
 run:
-  path: "source-code/gradlew"
-  args: ["--build-file", "source-code/build.gradle", "build"]
+  path: "source-code/build.sh"
