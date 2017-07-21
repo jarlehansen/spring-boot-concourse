@@ -6,10 +6,14 @@ resources:
       branch: master
 
 jobs:
-  - name: package
+  - name: build
     plan:
     - get: source-code
       trigger: true
-    - task: package
+    - task: build
       privileged: true
-      file: source-code/concourse/tasks/package.yml
+      file: source-code/concourse/tasks/build.yml
+    - task: test
+        run:
+          path: echo
+          args: [hello world]
