@@ -11,4 +11,4 @@ outputs:
   - name: build-output
 
 run:
-  path: "source-code/build.sh"
+  path: "source-code/concourse/tasks/build.sh"
