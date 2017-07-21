@@ -5,10 +5,10 @@ image_resource:
   source: {repository: java, tag: openjdk-8-alpine}
 
 inputs:
-  - name: source-code
+  - name: spring-boot-concourse
 
 outputs:
   - name: build-output
 
 run:
-  path: "source-code/concourse/tasks/build.sh"
+  path: "spring-boot-concourse/concourse/tasks/build.sh"

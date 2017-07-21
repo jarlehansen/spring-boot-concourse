@@ -1,3 +1,3 @@
 #!/bin/sh
-source-code/gradlew --build-file source-code/build.gradle build
-cp source-code/build/libs/*.jar build-output/
+spring-boot-concourse/gradlew --build-file spring-boot-concourse/build.gradle build
+cp spring-boot-concourse/build/libs/*.jar build-output/

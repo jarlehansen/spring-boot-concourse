@@ -1,5 +1,5 @@
 resources:
-  - name: source-code
+  - name: spring-boot-concourse
     type: git
     check_every: 10s
     source:
@@ -10,10 +10,10 @@ jobs:
 - name: build
   public: true
   plan:
-  - get: source-code
+  - get: spring-boot-concourse
     trigger: true
   - task: Build project
     privileged: true
-    file: source-code/concourse/tasks/build.yml
+    file: spring-boot-concourse/concourse/tasks/build.yml
   - task: Deploy artifact
-    file: source-code/concourse/tasks/deploy.yml
+    file: spring-boot-concourse/concourse/tasks/deploy.yml
