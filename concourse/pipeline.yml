@@ -1,6 +1,7 @@
 resources:
   - name: source-code
     type: git
+    check_every: 10s
     source:
       uri: https://github.com/jarlehansen/spring-boot-concourse.git
       branch: master
