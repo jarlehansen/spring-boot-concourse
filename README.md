@@ -12,3 +12,8 @@ Example setup using gradle, spring boot and [concourse](https://concourse.ci).
 
 1. **Setup concourse in vagrant and install pipeline**: `./up.sh`
 2. **Remove concourse vm**: `./destroy.sh`
+
+## References
+
+* [Tutorial](https://github.com/starkandwayne/concourse-tutorial)
+* [Pipeline patterns](https://github.com/pivotalservices/concourse-pipeline-samples/tree/master/concourse-pipeline-patterns)
