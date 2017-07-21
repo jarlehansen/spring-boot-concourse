@@ -1,3 +1,4 @@
+#!/bin/sh
 pushd source-code
     ./gradlew --build-file source-code/build.gradle build
 popd
